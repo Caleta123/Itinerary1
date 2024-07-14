@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+header {
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    background: linear-gradient(0deg, rgba(255,0,0,1) 0%, rgba(241,255,0,1) 100%);
+    margin-bottom: 0;
+}
+
+header p {
+    color: white;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+i {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+    color: white;
+    font-size: 30px;
+    border-bottom-right-radius: 100%;
+    transition: 0.5s;
+}
+
+i:hover {
+    color: rgb(107, 94, 94);
+}
+
+svg {
+    margin: -1px;
+    overflow-x: hidden;
+    z-index: 1;
+    position: relative;
+    pointer-events: none;
+}
+
+path {
+    overflow-x: hidden;
+    z-index: 2;
+    position: relative;
+}
+
+article {
+    text-align: center;
+    margin-top: -200px;
+    position: relative;
+    z-index: 0;
+}
+
+.tueg {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+#tu,
+#eg {
+    margin: 0;
+    flex: 1;
+    padding: 15%;
+    min-width: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+    position: relative;
+}
+
+#tu {
+    background-color: rgb(255, 111, 111);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#eg {
+    background-color: rgb(168, 37, 37);
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+
+
+#tu span,
+#eg span {
+    display: inline-block;
+    padding: 50px;
+    transition: 0.5s;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#tu:hover span,
+#eg:hover span {
+    transform: scale(1.5);
+    opacity: 0.6;
+}
+
+/* animation*/
+
+#tu p,
+#eg p {
+    opacity: 0;
+    position: absolute;
+    transition: all 0.5s;
+}
+
+
+#tu.expanded,
+#eg.expanded {
+    flex-basis: 100%;
+}
+
+#tu.expanded span {
+    margin-left: 40%;
+}
+
+#eg.expanded span {
+    margin-right: 40%;
+}
+
+#tu.expanded p {
+    margin-right: 40%;
+    opacity: 1;
+}
+
+#eg.expanded p {
+    margin-left: 40%;
+    opacity: 1;
+}
+
+#tu.shrinked,
+#eg.shrinked {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/* media */
+
+
+@media screen and (max-width: 767px) {
+    header {
+        background-size: cover;
+    }
+    article {
+        margin-top: 0;
+    }
+    svg {
+        margin: 0;
+    }
+    #tu,
+    #eg {
+        font-size: 20px;
+    }
+    .tueg {
+        display: block;
+    }
+    #eg.expanded span {
+        margin-right: 60%;
+    }
+    #tu.expanded span {
+        margin-left: 60%;
+    }
+}

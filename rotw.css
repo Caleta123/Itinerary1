@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    background-image: linear-gradient(to bottom right, white, rgb(163, 162, 162));
+}
+
+header {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://cdn.britannica.com/68/198168-050-16D23B84/Cove-port-coast-Black-Sea-Turkey-Amasra.jpg);
+    background-position-y: 60%;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+    border-bottom-right-radius: 20% 40%;
+    border-bottom-left-radius: 20% 10%;
+    position: relative;
+}
+
+header p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+}
+
+article a {
+    display: block;
+    width: 50px;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+#afro {
+    padding: 150px;
+    text-align: center;
+    margin-top: 200px;
+    margin-left: 30%;
+    border-top-right-radius: 40% 20%;
+    border-bottom-left-radius: 30% 60%;
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    background-image: url(https://cdn.britannica.com/68/192668-050-41E70F21/architecture-terrace-Tunisia-Tunis.jpg);
+    background-position: -20px -60px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+#afro:hover {
+    transform: scale(1.1);
+}
+
+#asia {
+    padding: 150px;
+    text-align: center;
+    margin-top: 200px;
+    margin-left: 50%;
+    border-top-right-radius: 40% 20%;
+    border-bottom-left-radius: 30% 60%;
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    background-image: url(https://cdn.britannica.com/58/93158-050-7719EB2B/view-Blue-Mosque-Istanbul-Hagia-Sophia.jpg);
+    background-position: center;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+#asia:hover {
+    transform: scale(1.1);
+}
+
+i {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+    color: white;
+    font-size: 30px;
+    border-bottom-right-radius: 100%;
+    transition: 0.5s;
+}
+
+i:hover {
+    color: black;
+}
+
+/* media */
+
+
+@media screen and (max-width: 767px) {
+    header {
+        background-size: cover;
+        background-position-y: -30px;
+    }
+    #asia,
+    #afro {
+        padding: 10vh;
+        margin-top: 12vh;
+        background-size: cover;
+        background-position: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    #east {
+        color: rgb(82, 82, 82);
+    }
+}

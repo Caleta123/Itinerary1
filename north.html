@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Severní Evropa</title>
+    <link rel="stylesheet" href="./north.css">
+    <script src="https://kit.fontawesome.com/2b2ba04e09.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <a href="./index.html"><i class="fa-solid fa-house"></i></a>
+
+    <header>
+        <p>Severní Evropa</p>
+    </header>
+    <svg id="visual" viewBox="0 0 900 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+        <linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="0%">
+            <stop offset="0%" style="stop-color:#020024;stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#097976;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:1" />
+        </linearGradient>
+        <path d="M0 101L30 99.7C60 98.3 120 95.7 180 101C240 106.3 300 119.7 360 124.8C420 130 480 127 540 123.3C600 119.7 660 115.3 720 109.7C780 104 840 97 870 93.5L900 90L900 0L870 0C840 0 780 0 720 0C660 0 600 0 540 0C480 0 420 0 360 0C300 0 240 0 180 0C120 0 60 0 30 0L0 0Z" fill="url(#grad1)" stroke-linecap="round" stroke-linejoin="miter"></path>
+    </svg>
+    <article>
+        <div class="nouk">
+            <a id="no" onclick="noExpand()">
+                <p>Červenec 2000 <br> <br>
+                    - Oslo <br>
+                    - Bergen <br>
+                    - Lillehammer <br>
+                    - Fjordy <br> 
+                    - Kodaň <br>              
+                </p>
+                <span>Norsko,<br> Dansko</span>
+            </a>
+            
+            <a id="uk" onclick="ukExpand()">
+                <p>Srpen 2003 <br> <br>
+                    - Skotsko <br>
+                    - Londýn <br>
+                </p>
+                <span>Anglie</span>
+            </a>
+        </div>
+        <div class="fiis">
+            <a id="fi" onclick="fiExpand()">
+                <p>Srpen 2006 <br> <br>
+                    - Helsinki <br>
+                    - Tampere <br>
+                    - Turku <br>
+                </p>
+                <span>Finsko</span></a>
+            <a id="is" onclick="isExpand()">
+                <p>Duben 2011 <br> <br>
+                    - Reykjavík <br>
+                    - Keflavík <br>
+                    - Vik <br>
+                </p>
+                <span>Island</span></a>
+        </div>
+    </article>
+
+<script src="./north.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+body { 
+    margin: 0;
+}
+
+header {
+    border-bottom: 1px solid black;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://wallpaperswide.com/download/european_city-wallpaper-1680x1050.jpgS");
+    background-position: -20px;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+}
+
+header p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    color: white;
+}
+
+article #eu {
+    margin-top: 0px;
+    height: 50vh;
+    background-color: rgb(175, 213, 247);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 40vh;
+    color: rgba(255, 255, 255, 0.884);
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    transition: 1s;
+}
+
+#eu:hover {
+    margin-right: 30vh;
+    color: rgb(249, 249, 180);
+}
+
+article #rotw {
+    margin-top: 0px;
+    height: 50vh;
+    background-color: rgb(241, 223, 119);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 40vh;
+    color: ivory;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    transition: 1s;
+}
+
+#rotw:hover {
+    margin-right: 30vh;
+    color: olive;
+}
+
+footer {
+    height: 20vh;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+}
+
+footer p { 
+    font-size: 25px;
+    margin: auto;
+    font-weight: bold;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    color: gray;
+    background-color: grey;
+    margin-top: 0px;
+}
+
+
+/* mobile version */
+
+@media screen and (max-width:767px) {
+    header {
+        background-size: cover;
+    }
+    article #eu {
+        margin-right: 0;
+    }
+    #eu:hover {
+        margin-right: 0;
+    }
+    article #rotw {
+        margin-right: 0;
+    }
+    #rotw:hover {
+        margin-right: 0;
+    }
+    footer {
+        display: block;
+        text-align: center;
+        justify-content: center;
+        height: 25px;
+    }
+    footer p {
+        font-size: 20px;
+    }
+}

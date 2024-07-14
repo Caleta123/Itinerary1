@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapadní Evropa</title>
+    <link rel="stylesheet" href="./west.css">
+    <script src="https://kit.fontawesome.com/2b2ba04e09.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <a href="./index.html"><i class="fa-solid fa-house"></i></a>
+
+    <header>
+        <p>Zapadní Evropa</p>
+    </header>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="0%">
+            <stop offset="0%" style="stop-color:rgba(2,48,71,1);stop-opacity:1" />
+            <stop offset="100%" style="stop-color:rgba(33,158,188,1);stop-opacity:1" />
+            
+            
+        </linearGradient>
+        <path fill="url(#grad1)" fill-opacity="1" d="M0,192L80,181.3C160,171,320,149,480,149.3C640,149,800,171,960,154.7C1120,139,1280,85,1360,58.7L1440,32L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+    </svg>
+    
+    <article>
+
+        <div class="czat">
+            <a id="cz" onclick="czExpand()">
+                <p>1985 Unor <br>
+                    - Jeseniky <br>
+                    1985 Červenec <br>
+                    - Krkonoše <br>
+                    1993 <br>
+                    - Nové město na Moravě <br>
+                    2001 Duben <br>
+                    - Luhačovice <br>
+                    2019 Zaři <br>
+                    - Horní Bečva wellness
+                </p>
+                <span>Česko</span>
+            </a>
+
+            <a id="at" onclick="atExpand()">
+                <p>1990 Leden <br>
+                    - Wien
+                </p>
+                <span>Rakousko</span>
+            </a>
+        </div>
+        
+        <div class="defra">
+            <a id="de" onclick="deExpand()">
+                <p>1991, 1998 <br>
+                    - Kolin nad Rynem <br>
+                </p>
+                <span>Německo</span>
+            </a>
+            
+            <a id="fra" onclick="fraExpand()">
+                <p>1994 Květen <br>
+                    - Paříž <br>
+                    1992 <br>
+                    - Monte Carlo
+                </p>
+                <span>Francie</span>
+            </a>
+        </div>
+
+        <div class="espt">
+            <a id="es" onclick="esExpand()">
+                <p>1992 <br>
+                    - Pineda de Mar <br> <br>
+                    2012 Květen <br>
+                    - Barcelona <br>
+                    - Madrid <br>
+                    - Zaragoza <br>
+                    - Sevilla <br>
+                    - Malaga <br>
+                    - Gibraltar
+                </p>
+                <span>Španělsko</span>
+            </a>
+
+            <a id="pt" onclick="ptExpand()">
+                <p>Květen 2010 <br>
+                    - Lisabon <br>
+                    - Elvas <br>
+                    - Porto <br>
+                    - Almada <br>
+                    - Coimbra
+                </p>
+                <span>Portugalsko</span>
+            </a>
+        </div>
+
+        <div class="benelux">
+            <a id="benelux" onclick="beneluxExpand()">
+                <p>1997 Květen <br> <br>
+                    - Volendam <br>
+                    - Zaanse Schaans <br>
+                    - Narden <br>
+                    - Amsterdam <br>
+                    - Rotterdam <br>
+                    - Aalsmeer <br>
+                    - Den Haag <br>
+                    - Scheveningen <br>
+                    - Bruxelles
+                </p>
+                <span>Benelux</span>
+            </a>
+
+            <a id="ch" onclick="chExpand()">
+                <p>1992 <br>
+                    -Geneva
+                </p>
+                <span>Švycarsko</span>
+            </a>
+        </div>
+    </article>   
+
+<script src="./west.js"></script>
+
+</body>
+</html>
+
+<!-- Cz, AT, DE, ES, PT, Benelux, FRA, Swiss -->

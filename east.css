@@ -1,0 +1,250 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+header {
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    background: linear-gradient(180deg, rgba(60,144,28,1) 0%, rgba(253,45,45,1) 100%);;
+    margin-bottom: 0;
+}
+
+header p {
+    color: white;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+i {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+    color: white;
+    font-size: 30px;
+    border-bottom-right-radius: 100%;
+    transition: 0.5s;
+}
+
+i:hover {
+    color: rgb(107, 94, 94);
+}
+
+svg {
+    margin: -1px;
+    overflow-x: hidden;
+    z-index: 1;
+    position: relative;
+    pointer-events: none;
+}
+
+path {
+    overflow-x: hidden;
+    z-index: 2;
+    position: relative;
+}
+
+article {
+    text-align: center;
+    margin-top: -175px;
+    position: relative;
+    z-index: 0;
+}
+
+.huro {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+#hu,
+#ro {
+    margin: 0;
+    flex: 1;
+    padding: 15%;
+    min-width: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+    position: relative;
+}
+
+#hu {
+    background-color: yellowgreen;
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    -webkit-text-stroke-color: whitesmoke;
+    -webkit-text-stroke-width: 1px;
+}
+
+
+#ro {
+    background-color: rgb(215, 215, 28);
+    color: rgb(67, 67, 167);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.skbl {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+#sk,
+#bl {
+    margin: 0;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    padding: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+    position: relative;
+}
+
+#sk {
+    background-color: rgb(138, 138, 255);
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#bl {
+    background-color: black;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+#hu span,
+#ro span,
+#sk span,
+#bl span {
+    display: inline-block;
+    padding: 50px;
+    transition: 0.5s;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#hu:hover span,
+#ro:hover span,
+#sk:hover span,
+#bl:hover span {
+    transform: scale(1.5);
+    opacity: 0.7;
+}
+
+
+/* animation */
+
+#hu p,
+#ro p,
+#sk p,
+#bl p {
+    opacity: 0;
+    position: absolute;
+    transition: all 0.5s;
+}
+
+#hu.expanded,
+#ro.expanded,
+#sk.expanded,
+#bl.expanded {
+    flex-basis: 100%;
+}
+
+#hu.expanded span {
+    margin-right: 40%;
+}
+
+#hu.expanded p {
+    opacity: 1;
+    margin-left: 40%;
+}
+
+#ro.expanded span {
+    margin-left: 40%;
+}
+
+#ro.expanded p {
+    opacity: 1;
+    margin-right: 40%;
+}
+
+#bl.expanded span {
+    margin-left: 40%;
+}
+
+#bl.expanded p {
+    opacity: 1;
+    margin-right: 40%;
+}
+
+#sk.expanded span {
+    margin-right: 40%;
+}
+
+#sk.expanded p {
+    opacity: 1;
+    margin-left: 40%;
+}
+
+#hu.shrinked,
+#ro.shrinked,
+#sk.shrinked,
+#bl.shrinked {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+@media screen and (max-width: 767px) {
+    header {
+        background-size: cover;
+        text-align: center;
+    }
+    article {
+        margin-top: 0;
+        overflow-x: hidden;
+    }
+    svg {
+        margin-top: -1px;
+        overflow: hidden;
+    }
+    #hu,
+    #ro,
+    #sk,
+    #bl {
+        font-size: 20px;
+    }
+    .huro,
+    .skbl {
+        display: block;
+    }
+    #hu.expanded span {
+        margin-right: 60%;
+    }
+    #ro.expanded span {
+        margin-left: 60%;
+    }
+    #sk.expanded span {
+        margin-right: 55%;
+    }
+    #bl.expanded span {
+        margin-left: 60%;
+    }
+}

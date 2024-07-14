@@ -1,0 +1,269 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+header {
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,118,1) 50%, rgba(0,212,255,1) 100%);
+    margin-bottom: 0;
+}
+
+header p {
+    color: white;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+i {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+    color: white;
+    font-size: 30px;
+    border-bottom-right-radius: 100%;
+    transition: 0.5s;
+}
+
+i:hover {
+    color: rgb(107, 94, 94);
+}
+
+svg {
+    margin: -1px;
+    overflow-x: hidden;
+    z-index: 1;
+    position: relative;
+    pointer-events: none;
+}
+
+path {
+    overflow-x: hidden;
+    z-index: 2;
+    position: relative;
+}
+
+article {
+    text-align: center;
+    margin-top: -127px;
+    position: relative;
+    z-index: 0;
+}
+
+.nouk {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+#no,
+#uk {
+    margin: 0;
+    flex: 1;
+    padding: 15%;
+    min-width: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+    position: relative;
+
+}
+
+#no {
+    background-color: rgb(255, 111, 111);
+    color: #004F70;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+
+#uk {
+    background-color: whitesmoke;
+    color: rgb(236, 104, 104);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
+
+.fiis {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+#fi,
+#is {
+    margin: 0;
+    flex: 1;
+    padding: 15%;
+    min-width: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+    position: relative;
+}
+
+#fi {
+    background-color: whitesmoke;
+    color: rgb(111, 145, 255);
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+#is {
+    background-color: rgb(111, 145, 255);
+    color: rgb(255, 90, 90);
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 1px;
+}
+
+#uk span,
+#fi span,
+#is span {
+    display: inline-block;
+    padding: 50px;
+    transition: 0.5s;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#no span {
+    display: inline-block;
+    transition-duration: 0.5s;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 50px;
+}
+
+#no:hover span,
+#uk:hover span,
+#fi:hover span,
+#is:hover span {
+    transform: scale(1.5);
+    opacity: 0.6;
+}
+
+
+/*
+
+norway click -> expand the box using javascript and make the info there
+
+*/
+
+
+#no p,
+#uk p,
+#fi p,
+#is p {
+    opacity: 0;
+    position: absolute;
+    transition: all 0.5s;
+}
+
+
+#no.expanded,
+#uk.expanded,
+#fi.expanded,
+#is.expanded {
+    flex-basis: 100%;
+}
+
+#no.expanded span {
+    margin-left: 40%;
+}
+
+#no.expanded p {
+    opacity: 1;
+    margin-right: 40%;
+}
+
+#uk.expanded span {
+    margin-right: 40%;
+}
+
+#uk.expanded p {
+    opacity: 1;
+    margin-left: 40%;
+}
+
+#fi.expanded span {
+    margin-left: 40%;
+}
+
+#fi.expanded p {
+    opacity: 1;
+    margin-right: 40%;
+}
+
+#is.expanded span {
+    margin-right: 40%;
+}
+
+#is.expanded p {
+    opacity: 1;
+    margin-left: 40%;
+}
+
+#uk.shrinked,
+#no.shrinked,
+#fi.shrinked,
+#is.shrinked {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
+
+
+/* media */
+
+
+@media screen and (max-width: 767px) {
+    header {
+        background-size: cover;
+        text-align: center;
+    }
+    article {
+        margin-top: 0;
+        overflow-x: hidden;
+    }
+    svg {
+        margin-top: -1px;
+        overflow: hidden;
+    }
+    #no,
+    #uk,
+    #fi,
+    #is {
+        font-size: 20px;
+    }
+    .nouk,
+    .fiis {
+        display: block;
+    }
+    #uk.expanded span {
+        margin-right: 60%;
+    }
+    #no.expanded span {
+        margin-left: 60%;
+    }
+    #is.expanded span {
+        margin-right: 60%;
+    }
+    #fi.expanded span {
+        margin-left: 60%;
+    }
+}

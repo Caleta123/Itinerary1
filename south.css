@@ -1,0 +1,274 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+header {
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    background: linear-gradient(180deg, rgba(35,28,144,1) 0%, rgba(72,45,253,1) 100%);
+    margin-bottom: 0;
+}
+
+header p {
+    color: white;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+i {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+    color: white;
+    font-size: 30px;
+    border-bottom-right-radius: 100%;
+    transition: 0.5s;
+}
+
+i:hover {
+    color: rgb(107, 94, 94);
+}
+
+svg {
+    margin: -1px;
+    overflow-x: hidden;
+    z-index: 1;
+    position: relative;
+    pointer-events: none;
+}
+
+path {
+    overflow-x: hidden;
+    z-index: 2;
+    position: relative;
+}
+
+article {
+    text-align: center;
+    margin-top: -150px;
+    position: relative;
+    z-index: 0;
+}
+
+.ithr {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+#it,
+#hr {
+    margin: 0;
+    flex: 1;
+    padding: 15%;
+    min-width: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+    position: relative;
+}
+
+#it {
+    background-color: rgb(198, 255, 114);
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    -webkit-text-stroke-color: rgb(236, 82, 82);
+    -webkit-text-stroke-width: 1px;
+}
+
+#hr {
+    background-color: rgba(104, 104, 255, 0.7);
+    color: rgb(255, 102, 102);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 1px;
+}
+
+.grcy {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+#gr,
+#cy {
+    margin: 0;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    padding: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+    position: relative;
+}
+
+#gr {
+    background: rgba(75, 75, 255, 0.7);
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#cy {
+    background-color: whitesmoke;
+    color: rgb(184, 205, 50);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#it span,
+#hr span,
+#gr span,
+#cy span {
+    display: inline-block;
+    padding: 50px;
+    transition: 0.5s;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
+#it:hover span,
+#hr:hover span,
+#gr:hover span,
+#cy:hover span {
+    transform: scale(1.5);
+    opacity: 0.7;
+}
+
+
+
+
+/* animation */
+
+#it p,
+#hr p,
+#gr p,
+#cy p {
+    opacity: 0;
+    position: absolute;
+    transition: all 0.5s;
+}
+
+#hr p {
+    font-size: 22px;
+}
+
+#it.expanded,
+#hr.expanded,
+#cy.expanded,
+#gr.expanded {
+    flex-basis: 100%;
+}
+
+#it.expanded span {
+    margin-right: 40%;
+}
+
+#it.expanded p {
+    opacity: 1;
+    margin-left: 40%; 
+}
+
+#hr.expanded span {
+    margin-left: 40%;
+}
+
+#hr.expanded p {
+    opacity: 1;
+    margin-right: 40%; 
+}
+
+#cy.expanded span {
+    margin-left: 40%;
+}
+
+#cy.expanded p {
+    opacity: 1;
+    margin-right: 40%;
+}
+
+#gr.expanded span {
+    margin-right: 40%;
+}
+
+#gr.expanded p {
+    opacity: 1;
+    margin-left: 40%;
+}
+
+#it.shrinked,
+#hr.shrinked,
+#gr.shrinked,
+#cy.shrinked {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* media */
+
+@media screen and (max-width: 767px) {
+    header {
+        background-size: cover;
+        text-align: center;
+    }
+    article {
+        margin-top: 0;
+        overflow-x: hidden;
+    }
+    svg {
+        margin-top: -1px;
+        overflow: hidden;
+    }
+    #it,
+    #hr,
+    #gr,
+    #cy {
+        font-size: 20px;
+    }
+    .ithr,
+    .grcy {
+        display: block;
+    }
+    #it.expanded span {
+        margin-right: 60%;
+    }
+    #hr.expanded span {
+        margin-left: 60%;
+    }
+    #gr.expanded span {
+        margin-right: 60%;
+    }
+    #cy.expanded span {
+        margin-left: 60%;
+    }
+    #hr p {
+        font-size: 13px;
+    }
+    #hr {
+        -webkit-text-stroke-color: none;
+        -webkit-text-stroke-width: 0px;
+        color: white;
+    }
+    #hr:hover span {
+        transform: scale(0.9);
+    }
+    #hr span {
+    padding: 150px;
+    }
+
+}

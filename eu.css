@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    background-image: linear-gradient(to bottom right, white, rgb(163, 162, 162));
+}
+
+header {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./bg1.webp), url(./bg2.jpg);
+    background-position: -10px 0px, 700px -100px;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+    border-bottom-left-radius: 40% 20%;
+    position: relative;
+}
+
+header p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+}
+
+header p span {
+    color: rgb(159, 225, 141);
+}
+
+article a {
+    display: block;
+    width: 50px;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+#north {
+    padding: 150px;
+    text-align: center;
+    margin-top: 200px;
+    margin-left: 30%;
+    border-top-right-radius: 40% 20%;
+    border-bottom-left-radius: 30% 60%;
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    background-image: url(https://live.staticflickr.com/5348/8983387461_edb5079fef_b.jpg);
+    background-position: -20px -60px;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+#north:hover {
+    transform: scale(1.1);
+}
+
+
+#south {
+    padding: 150px;
+    text-align: center;
+    margin-top: 200px;
+    margin-left: 50%;
+    border-top-right-radius: 20% 40%;
+    border-bottom-left-radius: 20%;
+    border-top-left-radius: 20% 60%;
+    border-bottom-right-radius: 10%;
+    background-image: url(https://ubytovanichorvatsko.cz/data/files/foto_clanky/primosten.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+#south:hover {
+    transform: scale(1.1);
+}
+
+#east {
+    padding: 150px;
+    text-align: center;
+    margin-top: 200px;
+    margin-left: 20%;
+    border-top-right-radius: 60% 20%;
+    border-bottom-left-radius: 30% 40%;
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 30%;
+    background-image: url(https://i0.wp.com/culturalfoodies.com/wp-content/uploads/2023/08/Krakow55.jpg?fit=6000%2C4000&ssl=1);
+    background-size: cover;
+    background-position-y: -20px;
+    background-repeat: no-repeat;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: 0.5s;
+}
+
+#east:hover {
+    transform: scale(1.1);
+}
+
+#west {
+    padding: 150px;
+    text-align: center;
+    margin-top: 200px;
+    margin-left: 40%;
+    border-top-right-radius: 40% 60%;
+    border-bottom-left-radius: 30% 50%;
+    border-top-left-radius: 60% 20%;
+    border-bottom-right-radius: 20% 10%;
+    background-image: url(./smallbg3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: 0.5s;
+}
+
+#west:hover {
+    transform: scale(1.1);
+}
+
+i {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+    color: white;
+    font-size: 30px;
+    border-bottom-right-radius: 100%;
+    transition: 0.5s;
+}
+
+i:hover {
+    color: black;
+}
+
+
+/* media query */
+
+@media screen and (max-width: 767px) {
+    header {
+        background-size: cover;
+        background-position-y: -30px;
+    }
+    #north, 
+    #west,
+    #east,
+    #south {
+        padding: 10vh;
+        margin-top: 12vh;
+        background-size: cover;
+        background-position: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    #east {
+        color: rgb(82, 82, 82);
+    }
+}
