@@ -242,7 +242,10 @@ article {
         margin-left: 60%;
     }
     #sk.expanded span {
-        margin-right: 55%;
+        margin-right: 60%;
+    }
+    #sk:hover span {
+        transform: scale(1.0);
     }
     #bl.expanded span {
         margin-left: 60%;
